@@ -4,6 +4,13 @@ const session = require('express-session');
 const apiRouter = require('./routes/api-router');
 
 const app = express();
+app.use(
+  session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+  })
+);
 app.use(express.json());
 
 app.get('/', (req, res, next) => {
