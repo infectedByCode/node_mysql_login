@@ -1,5 +1,3 @@
-const session = require('express-session');
-
 const { signinUser } = require('../models/auth-models');
 
 exports.loginUser = (req, res, next) => {
