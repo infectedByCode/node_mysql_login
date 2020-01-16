@@ -1,20 +1,15 @@
 const express = require('express');
 const session = require('express-session');
-const mysql = require('mysql');
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'pineappleGold',
-  database: 'mysql_test'
-});
-
-connection.connect();
+const apiRouter = require('./routes/api-router');
 
 const app = express();
+app.use(express.json());
 
 app.get('/', (req, res, next) => {
   res.send('Hello World!');
 });
+
+app.use('/api', apiRouter);
 
 module.exports = app;
