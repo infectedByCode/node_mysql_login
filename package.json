@@ -1,0 +1,29 @@
+{
+  "name": "node_mysql_login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mysql": "^2.17.1",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.0"
+  },
+  "scripts": {
+    "test": "mocha spec/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infectedByCode/node_mysql_login.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infectedByCode/node_mysql_login/issues"
+  },
+  "homepage": "https://github.com/infectedByCode/node_mysql_login#readme"
+}
