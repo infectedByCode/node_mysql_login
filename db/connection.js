@@ -7,6 +7,4 @@ const connection = mysql.createConnection({
   database: 'login_users'
 });
 
-connection.connect();
-
 module.exports = connection;
