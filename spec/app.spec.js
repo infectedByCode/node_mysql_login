@@ -15,7 +15,7 @@ describe('/api', () => {
         .expect(200)
         .then(({ body: { user } }) => {
           expect(user).to.be.an('object');
-          expect(user).to.have.keys(['uuid', 'username', 'user_password', 'email']);
+          expect(user).to.have.keys(['uuid', 'username', 'email']);
         });
     });
     describe('ERRORS /api/auth', () => {
