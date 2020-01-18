@@ -38,5 +38,21 @@ describe('/api', () => {
           });
       });
     });
+    describe.only('/signup', () => {
+      it('POST:201, creates and returns a new user', () => {
+        return request(app)
+          .post('/api/auth/signup')
+          .send({
+            username: 'newuser',
+            user_password: 'password',
+            email: 'newuser@email.com',
+            uuid: '710b962e-041c-11e1-9234-0123456789az'
+          })
+          .expect(201)
+          .then(({ body: { user } }) => {
+            expect(user).to.have.keys(['uuid', 'username', 'user_password', 'email']);
+          });
+      });
+    });
   });
 });
