@@ -6,7 +6,7 @@ USE login_users;
 DROP TABLE IF EXISTS users;
 CREATE TABLE users
 (
-  uuid VARCHAR(36) NOT NULL,
+  uuid VARCHAR(36) NOT NULL PRIMARY KEY,
   username VARCHAR(50) NOT NULL,
   user_password VARCHAR(255) NOT NULL,
   email VARCHAR(100) NOT NULL
